@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Porject Zero</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <!-- library css -->
+    <link rel="stylesheet" href="./lib/css/slimmenu.min.css" />
+
+    <!-- Including CSS files -->
+    <link rel="stylesheet" href="./app.css" type="text/css" />
+</head>
+<body>
+    <!-- .header starts here -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container clearfix">
+                <div class="header-links col col-6">
+                    <a href="tel:+9779852079777" title="+9779852079777">+9779852079777</a>
+                    <a href="mailto:yubaraj.name@gmail.com" title="yubaraj.name@gmail.com">yubaraj.name@gmail.com</a>
+                </div>
+                <div class="header-teaser col col-6">
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://www.facebook.com/aakaarsolution" target="_blank" title="Facebook">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>facebook</title>
+                                    <path fill="currentColor"
+                                        d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="Twitter">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>twitter</title>
+                                    <path fill="currentColor"
+                                        d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="Instagram">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>instagram</title>
+                                    <path fill="currentColor"
+                                        d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z">
+                                    </path>
+                                    <path fill="currentColor"
+                                        d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z">
+                                    </path>
+                                    <path fill="currentColor"
+                                        d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="linkedin">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>linkedin2</title>
+                                    <path fill="currentColor"
+                                        d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z">
+                                    </path>
+                                    <path fill="currentColor" d="M2 12h6v18h-6v-18z"></path>
+                                    <path fill="currentColor"
+                                        d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="YouTube">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>youtube</title>
+                                    <path fill="currentColor"
+                                        d="M31.681 9.6c0 0-0.313-2.206-1.275-3.175-1.219-1.275-2.581-1.281-3.206-1.356-4.475-0.325-11.194-0.325-11.194-0.325h-0.012c0 0-6.719 0-11.194 0.325-0.625 0.075-1.987 0.081-3.206 1.356-0.963 0.969-1.269 3.175-1.269 3.175s-0.319 2.588-0.319 5.181v2.425c0 2.587 0.319 5.181 0.319 5.181s0.313 2.206 1.269 3.175c1.219 1.275 2.819 1.231 3.531 1.369 2.563 0.244 10.881 0.319 10.881 0.319s6.725-0.012 11.2-0.331c0.625-0.075 1.988-0.081 3.206-1.356 0.962-0.969 1.275-3.175 1.275-3.175s0.319-2.587 0.319-5.181v-2.425c-0.006-2.588-0.325-5.181-0.325-5.181zM12.694 20.15v-8.994l8.644 4.513-8.644 4.481z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" title="Contact Now" class="btn">Contact Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container clearfix">
+                <a href="/" title="Project Zero" class="site-logo col col-3">
+                    <img src="./images/Aakaar-Solution.png" alt="Project Zero" />
+                </a>
+                <nav class="main-nav col col-9">
+                    <ul class="slimmenu">
+                        <li><a href="./index.html" title="Home">Home</a></li>
+                        <li><a href="./about.html" title="About Us">About Us</a>
+                            <ul>
+                                <li><a href="#" title="History">History</a></li>
+                                <li><a href="#" title="Our Teams">Our Teams</a></li>
+                                <li><a href="#" title="Message">Message</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./services.html" title="Services">Services</a></li>
+                        <li><a href="./gallery.html" title="Gallery">Gallery</a></li>
+                        <li><a href="./blog.html" title="Blog">Blog</a></li>
+                        <li><a href="./review.html" title="Testimonials">Testimonials</a></li>
+                        <li><a href="./faq.html" title="FAQs">FAQs</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ends .header -->
+    
+    
+    <div class="form-box section-padding bgcream">
+        <h1 class="titlestyle2 text-center">Contact Us</h1>
+        <!-- 
+            - Tags: parent (wrapper/holder), childrens (fields)
+            - Form tag mendatory attributes: 
+                    action (dynamic program file / #), 
+                    method (POST/GET),
+                    name (lowercase / snake_case)
+                    
+                    if, you have file uploading field in the form
+                    attrbutes required: enctype (multipart/form-data)
+
+            Connection between form and database
+            HTML Document (Client-end) - Dynamic/Logical Program - Database (MySQL, SQL, MongoDB etc...)
+
+            _____
+            Fields:
+            - input (Types: text, email, phone, password, date, time, file, number, range, radio, checkbox, submit, hidden etc..)
+            - select (combobox / dropdown)
+            - textarea
+            - button
+
+            ====
+            text: single string data (normal)
+            file: file_name, temp_name, source_path, MIME_TYPE (file extensions)
+
+            enctype = encryption type
+         -->
+        <form action="#" method="GET" name="contact_form">
+            <div class="form-field">
+                <label for="fname">Fullname:</label>
+                <input type="text" name="fullname" id="fname" value="" required placeholder="i.e.: Yubaraj Rai" />
+            </div>
+            <div class="form-field">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" value="" />
+            </div>
+            <div class="form-field">
+                <label for="phone">Phone:</label>
+                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" id="phone" value="" />
+            </div>
+            <div class="form-field">
+                <label for="address">Address:</label>
+                <input type="text" name="address" id="address" value="" />
+            </div>
+            <div class="form-field">
+                <label for="message">Message:</label>
+                <textarea rows="8" cols="12" name="message" id="message" placeholder="Write your message"></textarea>
+            </div>
+            <div class="form-footer">
+                <input type="submit" name="send" value="Send Message" />
+                <button type="reset" name="reset">Reset Form</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="map-box">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7192261.872802798!2d79.63339394651459!3d28.33324312000513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995e8c77d2e68cf%3A0x34a29abcd0cc86de!2sNepal!5e0!3m2!1sen!2sus!4v1676895514796!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container clearfix">
+                <div class="col col-4">
+                    <a href="/" title="Project Zero" class="site-logo">
+                        <img src="./images/Aakaar-Solution.png" alt="Project Zero" />
+                    </a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorem?</p>
+                </div>
+                <div class="col col-4">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="quick-links">
+                        <li><a href="./about.html" title="About Us">About Us</a></li>
+                        <li><a href="./services.html" title="Services">Services</a></li>
+                        <li><a href="./blog.html" title="Blog">Blog</a></li>
+                        <li><a href="./faq.html" title="FAQs">FAQs</a></li>
+                        <li><a href="./contact.html" title="Contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col col-4">
+                    <h4 class="footer-title">Contact Detail</h4>
+                    <ul class="contact-info">
+                        <li><a href="tel:+9779852079777" title="+9779852079777">+9779852079777</a></li>
+                        <li><a href="mailto:yubaraj.name@gmail.com" title="yubaraj.name@gmail.com">yubaraj.name@gmail.com</a></li>
+                    </ul>
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://www.facebook.com/aakaarsolution" target="_blank" title="Facebook">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>facebook</title>
+                                    <path fill="currentColor"
+                                        d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="Twitter">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>twitter</title>
+                                    <path fill="currentColor"
+                                        d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="Instagram">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>instagram</title>
+                                    <path fill="currentColor"
+                                        d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z">
+                                    </path>
+                                    <path fill="currentColor"
+                                        d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z">
+                                    </path>
+                                    <path fill="currentColor"
+                                        d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="linkedin">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>linkedin2</title>
+                                    <path fill="currentColor"
+                                        d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z">
+                                    </path>
+                                    <path fill="currentColor" d="M2 12h6v18h-6v-18z"></path>
+                                    <path fill="currentColor"
+                                        d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="YouTube">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>youtube</title>
+                                    <path fill="currentColor"
+                                        d="M31.681 9.6c0 0-0.313-2.206-1.275-3.175-1.219-1.275-2.581-1.281-3.206-1.356-4.475-0.325-11.194-0.325-11.194-0.325h-0.012c0 0-6.719 0-11.194 0.325-0.625 0.075-1.987 0.081-3.206 1.356-0.963 0.969-1.269 3.175-1.269 3.175s-0.319 2.588-0.319 5.181v2.425c0 2.587 0.319 5.181 0.319 5.181s0.313 2.206 1.269 3.175c1.219 1.275 2.819 1.231 3.531 1.369 2.563 0.244 10.881 0.319 10.881 0.319s6.725-0.012 11.2-0.331c0.625-0.075 1.988-0.081 3.206-1.356 0.962-0.969 1.275-3.175 1.275-3.175s0.319-2.587 0.319-5.181v-2.425c-0.006-2.588-0.325-5.181-0.325-5.181zM12.694 20.15v-8.994l8.644 4.513-8.644 4.481z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>  
+        </div>
+        <div class="footer-bottom text-center">
+            &copy;<script>
+                /** Get current year with JS*/
+                let date = new Date();
+                document.write(date.getFullYear());
+            </script> Copyright, All Rights Reserved!
+        </div>
+    </footer>
+
+    <!-- jQuery addon library -->
+    <script src="./lib/js/jquery.slimmenu.min.js"></script>
+    
+    <!-- project script -->
+    <script src="./app.js" type="text/javascript"></script>
+</body>
+</html>

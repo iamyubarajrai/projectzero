@@ -1,0 +1,863 @@
+/* 
+Color application:
+
+- name
+- hex value
+- rgb method/mode
+
+
+Color mode:
+- CMYK (For printing) (Cyan, Magenta, Yellow, Black)
+- RGB (For web (Red, Green, Blue)
+- Grayscale (general usecase: Black & White)
+- Lab color (Solid color)
+
+in css
+rgb/cmyk value: 0-255
+
+with rgb comes a (alpha) -> alpha = opacity / Transparency
+
+rgb(0,0,0); //black
+rgb(255, 255, 255) //white
+
+rgba(0, 0, 0, 0.6); // transparent black
+rgba(255, 255, 255, 0.6); // transparent white
+__________
+Hex value: six characters with hash sign
+        i.e.: #FFF222, #FFFFFF (White), #000000 (Black)
+              #F56D3H
+
+        We can write shorthand of similar character based color hex
+        i.e.: #FFFFFF;      ->          #FFF;
+              #000000;      ->          #000;
+
+*/
+/* 
+Gutter: space between column
+
+______________
+
+CSS units:
+- px (pixel)
+- vh (viewport height)
+- vw (viewport width)
+- % (percentage)
+- em (embeded / closest parent element unit: own holder or wrapper or container)
+- rem (root embeded / root parent element unit: html or body)
+
+
+________________
+
+CSS writing standard:
+
+css_selector {
+    - content (optional - with ::before and ::after)
+    - position and its supporting properties (option)(position, sides, transform)
+    - Display (display, background, visibility)
+    - Border
+    - Box Model style (width, height, padding, margin)
+    - Typography (Font/text styles: font-family, font-size, color...)
+    - Miscellaneous ( transition, opacity, animation etc...)
+    - z-index 
+}
+
+
+*/
+
+/* Universal CSS */
+* {
+    box-sizing: border-box;
+    zoom: 1;
+}
+
+html {
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+body,
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* grid CSS */
+.col {
+    padding-left: 10px;
+    padding-right: 10px;
+    float: left;
+}
+
+.col-1 {
+    width: 8.333%;
+}
+
+.col-2 {
+    width: 16.666%;
+}
+
+.col-3 {
+    width: 24.999%;
+}
+
+.col-4 {
+    width: 33.332%;
+}
+
+.col-5 {
+    width: 41.665%;
+}
+
+.col-6 {
+    width: 50%
+}
+
+.col-7 {
+    width: 58.331%;
+}
+
+.col-8 {
+    width: 66.664%;
+}
+
+.col-9 {
+    width: 74.997%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.663%;
+}
+
+.col-12 {
+    width: 100%
+}
+/* Assumption: 12 columns grid container 
+ie: 50% width: col6 
+
+Let assume: 12 columns = 100%
+one column = 8.333%
+*/
+
+/* Common CSS */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.bgcream {
+    background-color: #F2F2F2;
+}
+
+.titlestyle1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.2rem;
+}
+
+.titlestyle1 strong {
+    display:  block;
+    text-transform: uppercase;
+    font-size: 3.79rem;
+    color: brown;
+    letter-spacing: normal;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.titlestyle2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 42px;
+    color: brown;
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 36px;
+    border: 1px solid #FFF;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: limegreen;
+    transform: translateY(-3px);
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(-45deg);
+    margin-left: 10px;
+}
+
+.btn-primary {
+    background-color: green;
+}
+
+.text-link {
+    color: green;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.social-links {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.social-links li {
+    display: inline-block;
+}
+
+.social-links a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 4px;
+    color: green;
+    transition: 0.3s;
+}
+
+.social-links--alt a {
+    color: white;
+}
+
+.social-links svg {
+    width: 22px;
+    height: 22px;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+/* .header CSS */
+.header-top {
+    background-color: green;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.header-links {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header-links a {
+    display: inline-block;
+    text-decoration: none;
+    border-left: 1px solid white;
+    color: white;
+    padding: 2px 8px;
+    line-height: 1;
+}
+
+.header-links a:first-child {
+    border-left: 0;
+}
+
+.header-links a:hover {
+    text-decoration: underline;
+}
+
+.header-teaser {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-main .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Nav CSS */
+.main-nav {
+    position: relative;
+    z-index: 10;
+}
+
+.main-nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #222;
+    font-size: 17px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.main-nav li:not(.has-submenu) a {
+    padding-right: 16px;
+}
+
+.main-nav a:hover {
+    color: green;
+    transform: translateY(-3px);
+}
+
+.main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+/* overriding slimmenu */
+ul.slimmenu li {
+    background-color: transparent;
+}
+
+ul.slimmenu li .sub-toggle {
+    background-color: transparent;
+}
+
+ul.slimmenu li > ul {
+    background-color: white;
+}
+
+ul.slimmenu li ul li {
+    background-color: transparent;
+}
+
+ul.slimmenu li a {
+    padding-left: 12px;
+    transition: 0.3s;
+}
+
+ul.slimmenu li a:hover {
+    background-color: transparent;
+    color: green;
+}
+
+ul.slimmenu > li {
+    border-left: 0;
+}
+
+ul.slimmenu li .sub-toggle {
+    right: 8px;
+}
+
+ul.slimmenu li.has-submenu > a {
+    padding-right: 48px;
+}
+
+ul.slimmenu.collapsed {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: 100%;
+}
+
+/* .billboard css */
+.billboard-item {
+    position: relative;
+}
+
+.billboard img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: bottom center;
+}
+
+.billboard-detail {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 72px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* overriding slick css*/
+.billboard .slick-prev {
+    left: 25px ;
+}
+
+.billboard .slick-next {
+    right: 25px;
+}
+
+.billboard .slick-arrow {
+    z-index: 10;
+}
+
+.billboard .slick-dots {
+    bottom: 25px;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-dots li button:before {
+    font-size: 16px;
+    color: white;
+}
+
+.slick-dots li.slick-active button:before {
+    color: white;
+}
+
+/* .entry-section */
+.section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.section-padding-top {
+    padding-top: 80px;
+}
+
+.section-padding-bottom {
+    padding-bottom: 80px;
+}
+
+.entry-section {
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(0,0,0,0.8)), url("./images/bg-image.jpeg");
+}
+
+.entry-section .text-box {
+    color: white;
+}
+
+.entry-section .text-box p:first-of-type::first-letter {
+    font-size: 2rem;
+}
+
+.entry-section .image-box {
+    box-shadow: 0 0 22px 0 rgba(0,0,0,0.4);
+    height: 100%;
+}
+
+.entry-section .image-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.entry-section .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.entry-section--alt {
+    background: white;
+}
+
+.entry-section--alt .text-box {
+    color: #222;
+}
+
+/* gallery-box styling */
+.gallery-box {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-areas: "img1 img2 img5" "img3 img4 img5";
+    gap: 10px;
+}
+
+.gallery-grid--alt {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery-grid img {
+    display:  block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+.gallery-grid .img5 img {
+    height: 610px;
+}
+
+.img1 { grid-area: img1; }
+.img2 { grid-area: img2; }
+.img3 { grid-area: img3; }
+.img4 { grid-area: img4; }
+.img5 { grid-area: img5; }
+
+.gallery-grid a:hover  img {
+    transform: scale(1.2) rotate(3deg);
+}
+
+.gallery-item {
+    overflow: hidden;
+}
+
+.gallery-grid--alt .gallery-item {
+    width: calc(33.33% - 10px);
+    height: 240px;
+}
+
+.gallery-grid--alt img {
+    object-fit: cover;
+}
+
+/* Thumbnail grid CSS */
+.thumb-grid {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.thumb-grid .col {
+    text-align: center;
+}
+
+.thumb-icon svg {
+    width: 46px;
+    height: 46px;
+    color: green;
+}
+
+.thumb-text {
+    margin: 0;
+    line-height: 1;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.thumb-inner {
+    border: 1px solid #F2F2F2;
+    box-shadow: 0 0 22px 0 rgba(0,0,0,0.1);
+    padding: 40px 20px;
+}
+
+/* .block-grid CSS */
+.block-grid {
+    background-color: #F2F2F2;
+    margin-top: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.grid-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.grid-header p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.grid-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: white;
+    width: calc(33.33% - 20px);
+}
+
+.grid-image img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.grid-image a,
+.grid-title a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.grid-detail {
+    padding: 20px;
+}
+
+.grid-title {
+    margin: 0;
+    font-size: 36px;
+}
+
+.meta-item {
+    padding-right: 16px;
+    line-height: 1;
+}
+
+.meta-item svg,
+.meta-item span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.meta-item svg {
+    width: 18px;
+    height: 18px;
+    color: #666;
+}
+
+.meta-item span {
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* .review-box CSS */
+.review-box {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.review-item {
+    position: relative;
+    padding: 45px;
+}
+
+.review-item > svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    color: #F2F2F2;
+    z-index: -1;
+}
+
+.review-meta img {
+    border: 3px solid white;
+    box-shadow: 0 0 12px 0 rgba(0,0,0,0.1);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.review-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-style: italic;
+    line-height: 1;
+}
+
+.reviewer strong {
+    display: block;
+}
+
+/* .accordion */
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion dd {
+    display: none;
+    margin-left: 0;
+    padding: 20px;
+}
+
+.accordion dd:first-of-type {
+    display: block;
+}
+
+.accordion dt {
+    background-color: green;
+    border-top: 1px dashed rgba(255, 255, 255, 0.4);
+    padding: 8px 16px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.accordion dt:hover {
+    background-color: limegreen;
+}
+
+/* form-box */
+.form-box form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-box input,
+.form-box textarea,
+.form-box select {
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.form-box label {
+    font-weight: 500;
+}
+
+.form-box [type*="submit"],
+.form-box [type*="reset"] {
+    border: 0;
+    width: auto;
+    padding: 12px 36px;
+    color: white;
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.form-box [type*="submit"] {
+    background-color: green;
+}
+
+.form-box [type*="reset"] {
+    background-color: brown;
+}
+
+.form-box [type*="submit"]:hover,
+.form-box [type*="reset"]:hover {
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    background-color: green;
+    padding: 10px;
+    color: white;
+}
+
+.contact-info,
+.quick-links {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.contact-info li,
+.quick-links li {
+    border-top: 1px dashed rgba(0,0,0,0.3);
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.contact-info a,
+.quick-links a {
+    color: green;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-info a:hover,
+.quick-links a:hover {
+    text-decoration: underline;
+    color: limegreen;
+}
+
+.footer-title {
+    font-size: 21px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.footer {
+    border-top: 3px solid green;
+}
+
+.map-box iframe {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+
+.menu-collapser {
+    background-color: transparent;
+}
+
+/**
+Responsive Styling
+*/
+/*For printing*/
+@media print {
+    .header, .billboard, .gallery-box {
+        display: none;
+    }
+}
+
+/*For digital screen*/
+/* @media screen and (max-width: 1024px) {
+    .header {
+        background-color: red;
+    }
+} 
+
+or use all*/
+
+@media all and (max-width: 1024px) and (min-width: 640px) {
+    .header {
+        background-color: #F2F2F2;
+    }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
+    body {
+        background-color: lightcyan;
+    }
+}
+
+@media all and (max-width: 800px) and (orientation: portrait) {
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    .grid-item {
+        width: 100%;
+    }
+}

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+        Development phase
+        Production phase (Deployment)
+            - minify document, css and js
+        CI/CD: Continuous Integration/ Continuous Development
+     -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Porject Zero</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- 
+            HTML4
+            Layout element: <div></div>
+
+            ICON: uses images, *.png or sprite images
+
+            Graphics: images, JavaScript
+
+            HTML5
+            Layout element: (div and newly introduced symantic tags)
+            - <main></main>
+            - section, header, footer, article, aside, nav, figure
+
+            ICON: <svg></svg>
+
+            Graphics: Canvas
+
+            _______________________
+            Naming Convention:
+            - lowercasetype
+            - camelCaseType
+            - snake_case_type
+            - PascalCaseType
+            - hyphen-case-type
+
+        HTML Elements:
+            - Block level element
+            - Text level element (Inline element)
+        
+        
+        HTML Lists:
+        - Unordered list (list item)
+        - Ordered list (list item)
+        - Definition list (Definition Title, Definition detail)
+
+         -->
+
+         <!-- 
+            CSS Type
+            - Inline
+            - Internal 
+            - External
+
+            CSS Selectors
+            - tagname
+            - .classname
+            - #id
+            - *                         (Universal / Global)
+            - [type*="submit"]          (Attribute Selector)
+              input[type*="submit"]
+            - .classname1,              (Group selector)
+              .classname2 > h1,         (Direct child selector)
+              tagname,
+              #id { ... }
+            - Pseudo element            (*::before, *::after)
+            - Pseudo class              (emaining: *:hover and all...)
+                                        *:focus,
+                                        *:active,
+                                        *:first-child
+                                        *:last-child
+                                        *:last-of-type
+                                        *:first-of-type
+                                        *:first-line
+                                        *:visited
+                                        *:first-letter
+                                        *:nth-child
+                                        *:nth-of-type
+          -->
+
+          <!-- library css -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+          <link rel="stylesheet" href="./lib/css/slimmenu.min.css" />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+          <!-- Including CSS files -->
+          <link rel="stylesheet" href="./app.css" type="text/css" />
+
+</head>
+<body>
+    <!-- .header starts here -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container clearfix">
+                <div class="header-links col col-6">
+                    <a href="tel:+9779852079777" title="+9779852079777">+9779852079777</a>
+                    <a href="mailto:yubaraj.name@gmail.com" title="yubaraj.name@gmail.com">yubaraj.name@gmail.com</a>
+                </div>
+                <div class="header-teaser col col-6">
+                    <ul class="social-links social-links--alt">
+                        <li>
+                            <a href="https://www.facebook.com/aakaarsolution" target="_blank" title="Facebook">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>facebook</title>
+                                    <path fill="currentColor"
+                                        d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="Twitter">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>twitter</title>
+                                    <path fill="currentColor"
+                                        d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="Instagram">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>instagram</title>
+                                    <path fill="currentColor"
+                                        d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z">
+                                    </path>
+                                    <path fill="currentColor"
+                                        d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z">
+                                    </path>
+                                    <path fill="currentColor"
+                                        d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="linkedin">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>linkedin2</title>
+                                    <path fill="currentColor"
+                                        d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z">
+                                    </path>
+                                    <path fill="currentColor" d="M2 12h6v18h-6v-18z"></path>
+                                    <path fill="currentColor"
+                                        d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="YouTube">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>youtube</title>
+                                    <path fill="currentColor"
+                                        d="M31.681 9.6c0 0-0.313-2.206-1.275-3.175-1.219-1.275-2.581-1.281-3.206-1.356-4.475-0.325-11.194-0.325-11.194-0.325h-0.012c0 0-6.719 0-11.194 0.325-0.625 0.075-1.987 0.081-3.206 1.356-0.963 0.969-1.269 3.175-1.269 3.175s-0.319 2.588-0.319 5.181v2.425c0 2.587 0.319 5.181 0.319 5.181s0.313 2.206 1.269 3.175c1.219 1.275 2.819 1.231 3.531 1.369 2.563 0.244 10.881 0.319 10.881 0.319s6.725-0.012 11.2-0.331c0.625-0.075 1.988-0.081 3.206-1.356 0.962-0.969 1.275-3.175 1.275-3.175s0.319-2.587 0.319-5.181v-2.425c-0.006-2.588-0.325-5.181-0.325-5.181zM12.694 20.15v-8.994l8.644 4.513-8.644 4.481z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" title="Contact Now" class="btn">Contact Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container clearfix">
+                <a href="/" title="Project Zero" class="site-logo col col-3">
+                    <img src="./images/Aakaar-Solution.png" alt="Project Zero" />
+                </a>
+                <nav class="main-nav col col-9">
+                    <ul class="slimmenu">
+                        <li><a href="./index.html" title="Home">Home</a></li>
+                        <li><a href="./about.html" title="About Us">About Us</a>
+                            <ul>
+                                <li><a href="#" title="History">History</a></li>
+                                <li><a href="#" title="Our Teams">Our Teams</a></li>
+                                <li><a href="#" title="Message">Message</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./services.html" title="Services">Services</a></li>
+                        <li><a href="./gallery.html" title="Gallery">Gallery</a></li>
+                        <li><a href="./blog.html" title="Blog">Blog</a></li>
+                        <li><a href="./review.html" title="Testimonials">Testimonials</a></li>
+                        <li><a href="./faq.html" title="FAQs">FAQs</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ends .header -->
+    <!-- .billboard starts here 
+    CSS Position:
+    - Relative
+    - Absolute
+    - Fixed
+    - Sticky
+    - Static
+
+    - z-index: 1
+
+    - sides:
+        top:
+        right:
+        bottom:
+        left:
+
+    - Transform:
+        translate(X, Y)
+
+    Note: Absolute always moves according to position relative
+        If no parent found with relative, goes with body respect
+    -->
+    <div class="billboard">
+        <div class="billboard-item">
+            <img src="./uploads/forestbridge.jpg" alt="Forest Bridge" />
+            <div class="billboard-detail">
+                <div class="container">Explore <br/>Nepal</div>
+            </div>
+        </div>
+        <div class="billboard-item">
+            <img src="./uploads/scene.jpg" alt="Forest Bridge" />
+            <div class="billboard-detail">
+                <div class="container">Explore <br/>Scene</div>
+            </div>
+        </div>
+        <div class="billboard-item">
+            <img src="./uploads/sunset.jpg" alt="Forest Bridge" />
+            <div class="billboard-detail">
+                <div class="container">Explore <br/>Sunset</div>
+            </div>
+        </div>
+    </div>
+    <!-- .billboard ends here -->
+
+    <!--
+    <div class="js-info" id="js-info">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, vel.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nihil nemo dolores neque expedita libero dolor unde sequi eaque ratione?</p>
+        <button class="js-btn">Click Me</button>
+        <button class="js-hide">Hid Paragraph</button>
+        <button class="js-show">Show Paragraph</button>
+        <button class="js-toggle">Toggle Paragraph</button>
+    </div>
+    -->
+    <!-- jQuery (JS library)
+    - Main library jQuery (mendatory)
+    - addons: slider, menu, popup etc
+            - slick carosel / wow slider / revolution slider etc..
+            - mega menu / slimmenu
+            - fancybox
+
+    emmet.io
+    -->
+    <section class="entry-section section-padding">
+        <div class="container clearfix">
+            <div class="col col-7">
+                <h1 class="titlestyle1">Welcome to <strong>Nepal</strong></h1>
+                <div class="text-box">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nemo doloremque nihil tempora officiis, nobis magnam, cumque dolores libero amet fugiat porro. Facilis, rerum? Sit error ipsa, eos quidem hic provident consectetur sequi, earum iusto unde, inventore tempora asperiores maxime quasi voluptates. Repudiandae quos suscipit deleniti possimus, corrupti adipisci repellat.[...]</p>
+                </div>
+                <a href="./about.html" title="Read More" class="btn btn-primary">Read More</a>
+            </div>
+            <div class="col col-5">
+                <figure class="image-box">
+                    <img src="./uploads/sunset.jpg" alt="">
+                </figure>
+            </div>
+        </div>
+    </section>
+    <div class="gallery-box">
+        <h2 class="titlestyle2 text-center">Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item img1">
+                <a href="./uploads/img1.jpg" title="IMG" data-fancybox="gallery">
+                    <img src="./uploads/img1.jpg" alt="IMG">
+                </a>
+            </div>
+            <div class="gallery-item img2">
+                <a href="./uploads/img2.jpg" title="IMG" data-fancybox="gallery">
+                    <img src="./uploads/img2.jpg" alt="IMG">
+                </a>
+            </div>
+            <div class="gallery-item img3">
+                <a href="./uploads/img3.jpg" title="IMG" data-fancybox="gallery">
+                    <img src="./uploads/img3.jpg" alt="IMG">
+                </a>
+            </div>
+            <div class="gallery-item img4">
+                <a href="./uploads/img4.jpg" title="IMG" data-fancybox="gallery">
+                    <img src="./uploads/img4.jpg" alt="IMG">
+                </a>
+            </div>
+            <div class="gallery-item img5">
+                <a href="./uploads/img5.jpg" title="IMG" data-fancybox="gallery">
+                    <img src="./uploads/img5.jpg" alt="IMG">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="thumb-grid">
+        <h2 class="titlestyle2 text-center">Our Services</h2>
+        <div class="container clearfix">
+            <div class="col col-4">
+                <div class="thumb-inner">
+                    <span class="thumb-icon">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <title>devices</title>
+                            <path fill="currentColor" d="M21.984 17.016v-7.031h-3.984v7.031h3.984zM23.016 8.016q0.422 0 0.703 0.281t0.281 0.703v9.984q0 0.422-0.281 0.727t-0.703 0.305h-6q-0.422 0-0.727-0.305t-0.305-0.727v-9.984q0-0.422 0.305-0.703t0.727-0.281h6zM3.984 6v11.016h10.031v3h-14.016v-3h2.016v-11.016q0-0.797 0.586-1.406t1.383-0.609h18v2.016h-18z"></path>
+                        </svg>
+                    </span>
+                    <h4 class="thumb-text">Web Development</h4>
+                </div>
+            </div>
+            <div class="col col-4">
+                <div class="thumb-inner">
+                    <span class="thumb-icon">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                            <title>ticket</title>
+                            <path fill="currentColor" d="M18 10l4 4-8 8-4-4zM31.298 9.297l-2.297-2.297-1 1c-0.512 0.512-1.219 0.828-2 0.828-1.562 0-2.829-1.266-2.829-2.828 0-0.781 0.317-1.489 0.829-2.001l1-1-2.297-2.297c-0.936-0.936-2.469-0.936-3.405 0l-18.595 18.595c-0.936 0.936-0.936 2.469 0 3.405l2.297 2.297 0.999-0.999c0.512-0.513 1.22-0.83 2.001-0.83 1.562 0 2.828 1.266 2.828 2.828 0 0.781-0.317 1.489-0.829 2.001l-1 1 2.297 2.297c0.936 0.936 2.469 0.936 3.405 0l18.595-18.595c0.936-0.937 0.936-2.469 0-3.406zM14 26l-8-8 12-12 8 8-12 12z"></path>
+                        </svg>
+                    </span>
+                    <h4 class="thumb-text">Air Ticketing</h4>
+                </div>
+            </div>
+            <div class="col col-4">
+                <div class="thumb-inner">
+                    <span class="thumb-icon">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                            <title>megaphone</title>
+                            <path fill="currentColor" d="M25 0c-2.053 0-3.666 1.41-4.824 3.586l-0.021-0.012c-1.682 3.293-4.186 5.426-6.929 5.426h-9.226c-2.243 0-4 2.197-4 5 0 2.805 1.757 5 4 5 1.103 0.004 1.995 0.896 1.995 2v9c0 1.105 0.896 2 2 2h4c1.104 0 2-0.895 2-2v-1c0-1-1-1.447-1-2v-7c0-0.023 0.016-0.039 0.018-0.062 0.010-0.143 0.049-0.275 0.112-0.395 0.018-0.033 0.037-0.059 0.059-0.088 0.080-0.119 0.181-0.217 0.304-0.293 0.006-0.004 0.008-0.010 0.014-0.014 0.004 0 0.007-0.004 0.011-0.004 0.080-0.045 0.176-0.055 0.266-0.080 2.524 0.268 4.809 2.305 6.377 5.373l0.025-0.012c1.159 2.169 2.768 3.575 4.819 3.575 4.596 0 7-7.043 7-14s-2.404-14-7-14zM20 14c0-1.037 0.061-2.039 0.164-3h2.836c1.104 0 2 1.344 2 3 0 1.658-0.896 3-2 3h-2.836c-0.103-0.961-0.164-1.961-0.164-3zM2 14c0-1.656 0.896-3 2-3h7.014c-0.62 0.729-1.014 1.787-1.014 3 0 1.215 0.394 2.273 1.014 3h-7.014c-1.104 0-2-1.342-2-3zM11.995 30h-4v-9c0-0.729-0.195-1.41-0.537-2h0.698v0.012h3.008c-0.107 0.311-0.169 0.641-0.169 0.988v7c0 0.963 0.538 1.604 0.859 1.986 0.044 0.053 0.096 0.107 0.141 0.166v0.848zM13.226 17.012h-0.226v-0.012c-1.104 0-2-1.342-2-3 0-1.656 0.896-3 2-3h0.226c1.886 0 3.652-0.742 5.206-2.018-0.286 1.61-0.432 3.315-0.432 5.018 0 1.709 0.146 3.42 0.434 5.031-1.555-1.277-3.322-2.019-5.208-2.019zM25 26c-2.018 0-3.75-2.871-4.541-7h2.541c2.242 0 4-2.195 4-5 0-2.803-1.758-5-4-5h-2.541c0.791-4.127 2.523-7 4.541-7 2.762 0 5 5.373 5 12s-2.238 12-5 12z"></path>
+                        </svg>
+                    </span>
+                    <h4 class="thumb-text">Digital Marketing</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="block-grid section-padding">
+        <header class="grid-header container">
+            <div class="grid-teaser">
+                <h2 class="titlestyle2">Our Blog</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, a.</p>
+            </div>
+            <a href="#" title="View All" class="btn btn-primary">View All</a>
+        </header>
+        <div class="grid-box container">
+            <div class="grid-item">
+                <figure class="grid-image">
+                    <a href="#" title="Everest Trip">
+                        <img src="./uploads/img1.jpg" alt="" />
+                    </a>
+                </figure>
+                <div class="grid-detail">
+                    <h3 class="grid-title">
+                        <a href="#" title="Everest Trip">Everest Trip</a>
+                    </h3>
+                    <div class="post-meta">
+                        <span class="meta-item">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <title>user</title>
+                                <path fill="currentColor" d="M21 21v-2c0-1.38-0.561-2.632-1.464-3.536s-2.156-1.464-3.536-1.464h-8c-1.38 0-2.632 0.561-3.536 1.464s-1.464 2.156-1.464 3.536v2c0 0.552 0.448 1 1 1s1-0.448 1-1v-2c0-0.829 0.335-1.577 0.879-2.121s1.292-0.879 2.121-0.879h8c0.829 0 1.577 0.335 2.121 0.879s0.879 1.292 0.879 2.121v2c0 0.552 0.448 1 1 1s1-0.448 1-1zM17 7c0-1.38-0.561-2.632-1.464-3.536s-2.156-1.464-3.536-1.464-2.632 0.561-3.536 1.464-1.464 2.156-1.464 3.536 0.561 2.632 1.464 3.536 2.156 1.464 3.536 1.464 2.632-0.561 3.536-1.464 1.464-2.156 1.464-3.536zM15 7c0 0.829-0.335 1.577-0.879 2.121s-1.292 0.879-2.121 0.879-1.577-0.335-2.121-0.879-0.879-1.292-0.879-2.121 0.335-1.577 0.879-2.121 1.292-0.879 2.121-0.879 1.577 0.335 2.121 0.879 0.879 1.292 0.879 2.121z"></path>
+                            </svg>
+                            <span>Yubaraj Rai</span>
+                        </span>
+                        <span class="meta-item">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <title>calendar</title>
+                                <path fill="currentColor" d="M29.334 3h-4.334v-2c0-0.553-0.447-1-1-1s-1 0.447-1 1v2h-6v-2c0-0.553-0.448-1-1-1s-1 0.447-1 1v2h-6v-2c0-0.553-0.448-1-1-1s-1 0.447-1 1v2h-4.333c-1.473 0-2.667 1.193-2.667 2.666v23.667c0 1.473 1.194 2.667 2.667 2.667h26.667c1.473 0 2.666-1.194 2.666-2.667v-23.667c0-1.473-1.193-2.666-2.666-2.666zM30 29.333c0 0.368-0.299 0.667-0.666 0.667h-26.667c-0.368 0-0.667-0.299-0.667-0.667v-23.667c0-0.367 0.299-0.666 0.667-0.666h4.333v2c0 0.553 0.448 1 1 1s1-0.447 1-1v-2h6v2c0 0.553 0.448 1 1 1s1-0.447 1-1v-2h6v2c0 0.553 0.447 1 1 1s1-0.447 1-1v-2h4.334c0.367 0 0.666 0.299 0.666 0.666v23.667zM7 12h4v3h-4zM7 17h4v3h-4zM7 22h4v3h-4zM14 22h4v3h-4zM14 17h4v3h-4zM14 12h4v3h-4zM21 22h4v3h-4zM21 17h4v3h-4zM21 12h4v3h-4z"></path>
+                            </svg>
+                            <span>Jan 20, 2023</span>
+                        </span>
+                    </div>
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consectetur vitae eveniet numquam aliquam officiis. Illo, dicta. Dolore, similique assumenda?</p>
+                    </div>
+                    <a href="#" class="text-link" title="Read More">Read More</a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <figure class="grid-image">
+                    <a href="#" title="Everest Trip">
+                        <img src="./uploads/img1.jpg" alt="" />
+                    </a>
+                </figure>
+                <div class="grid-detail">
+                    <h3 class="grid-title">
+                        <a href="#" title="Everest Trip">Everest Trip</a>
+                    </h3>
+                    <div class="post-meta">
+                        <span class="meta-item">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <title>user</title>
+                                <path fill="currentColor" d="M21 21v-2c0-1.38-0.561-2.632-1.464-3.536s-2.156-1.464-3.536-1.464h-8c-1.38 0-2.632 0.561-3.536 1.464s-1.464 2.156-1.464 3.536v2c0 0.552 0.448 1 1 1s1-0.448 1-1v-2c0-0.829 0.335-1.577 0.879-2.121s1.292-0.879 2.121-0.879h8c0.829 0 1.577 0.335 2.121 0.879s0.879 1.292 0.879 2.121v2c0 0.552 0.448 1 1 1s1-0.448 1-1zM17 7c0-1.38-0.561-2.632-1.464-3.536s-2.156-1.464-3.536-1.464-2.632 0.561-3.536 1.464-1.464 2.156-1.464 3.536 0.561 2.632 1.464 3.536 2.156 1.464 3.536 1.464 2.632-0.561 3.536-1.464 1.464-2.156 1.464-3.536zM15 7c0 0.829-0.335 1.577-0.879 2.121s-1.292 0.879-2.121 0.879-1.577-0.335-2.121-0.879-0.879-1.292-0.879-2.121 0.335-1.577 0.879-2.121 1.292-0.879 2.121-0.879 1.577 0.335 2.121 0.879 0.879 1.292 0.879 2.121z"></path>
+                            </svg>
+                            <span>Yubaraj Rai</span>
+                        </span>
+                        <span class="meta-item">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <title>calendar</title>
+                                <path fill="currentColor" d="M29.334 3h-4.334v-2c0-0.553-0.447-1-1-1s-1 0.447-1 1v2h-6v-2c0-0.553-0.448-1-1-1s-1 0.447-1 1v2h-6v-2c0-0.553-0.448-1-1-1s-1 0.447-1 1v2h-4.333c-1.473 0-2.667 1.193-2.667 2.666v23.667c0 1.473 1.194 2.667 2.667 2.667h26.667c1.473 0 2.666-1.194 2.666-2.667v-23.667c0-1.473-1.193-2.666-2.666-2.666zM30 29.333c0 0.368-0.299 0.667-0.666 0.667h-26.667c-0.368 0-0.667-0.299-0.667-0.667v-23.667c0-0.367 0.299-0.666 0.667-0.666h4.333v2c0 0.553 0.448 1 1 1s1-0.447 1-1v-2h6v2c0 0.553 0.448 1 1 1s1-0.447 1-1v-2h6v2c0 0.553 0.447 1 1 1s1-0.447 1-1v-2h4.334c0.367 0 0.666 0.299 0.666 0.666v23.667zM7 12h4v3h-4zM7 17h4v3h-4zM7 22h4v3h-4zM14 22h4v3h-4zM14 17h4v3h-4zM14 12h4v3h-4zM21 22h4v3h-4zM21 17h4v3h-4zM21 12h4v3h-4z"></path>
+                            </svg>
+                            <span>Jan 20, 2023</span>
+                        </span>
+                    </div>
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consectetur vitae eveniet numquam aliquam officiis. Illo, dicta. Dolore, similique assumenda?</p>
+                    </div>
+                    <a href="#" class="text-link" title="Read More">Read More</a>
+                </div>
+            </div>
+            <div class="grid-item">
+                <figure class="grid-image">
+                    <a href="#" title="Everest Trip">
+                        <img src="./uploads/img1.jpg" alt="" />
+                    </a>
+                </figure>
+                <div class="grid-detail">
+                    <h3 class="grid-title">
+                        <a href="#" title="Everest Trip">Everest Trip</a>
+                    </h3>
+                    <div class="post-meta">
+                        <span class="meta-item">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <title>user</title>
+                                <path fill="currentColor" d="M21 21v-2c0-1.38-0.561-2.632-1.464-3.536s-2.156-1.464-3.536-1.464h-8c-1.38 0-2.632 0.561-3.536 1.464s-1.464 2.156-1.464 3.536v2c0 0.552 0.448 1 1 1s1-0.448 1-1v-2c0-0.829 0.335-1.577 0.879-2.121s1.292-0.879 2.121-0.879h8c0.829 0 1.577 0.335 2.121 0.879s0.879 1.292 0.879 2.121v2c0 0.552 0.448 1 1 1s1-0.448 1-1zM17 7c0-1.38-0.561-2.632-1.464-3.536s-2.156-1.464-3.536-1.464-2.632 0.561-3.536 1.464-1.464 2.156-1.464 3.536 0.561 2.632 1.464 3.536 2.156 1.464 3.536 1.464 2.632-0.561 3.536-1.464 1.464-2.156 1.464-3.536zM15 7c0 0.829-0.335 1.577-0.879 2.121s-1.292 0.879-2.121 0.879-1.577-0.335-2.121-0.879-0.879-1.292-0.879-2.121 0.335-1.577 0.879-2.121 1.292-0.879 2.121-0.879 1.577 0.335 2.121 0.879 0.879 1.292 0.879 2.121z"></path>
+                            </svg>
+                            <span>Yubaraj Rai</span>
+                        </span>
+                        <span class="meta-item">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                <title>calendar</title>
+                                <path fill="currentColor" d="M29.334 3h-4.334v-2c0-0.553-0.447-1-1-1s-1 0.447-1 1v2h-6v-2c0-0.553-0.448-1-1-1s-1 0.447-1 1v2h-6v-2c0-0.553-0.448-1-1-1s-1 0.447-1 1v2h-4.333c-1.473 0-2.667 1.193-2.667 2.666v23.667c0 1.473 1.194 2.667 2.667 2.667h26.667c1.473 0 2.666-1.194 2.666-2.667v-23.667c0-1.473-1.193-2.666-2.666-2.666zM30 29.333c0 0.368-0.299 0.667-0.666 0.667h-26.667c-0.368 0-0.667-0.299-0.667-0.667v-23.667c0-0.367 0.299-0.666 0.667-0.666h4.333v2c0 0.553 0.448 1 1 1s1-0.447 1-1v-2h6v2c0 0.553 0.448 1 1 1s1-0.447 1-1v-2h6v2c0 0.553 0.447 1 1 1s1-0.447 1-1v-2h4.334c0.367 0 0.666 0.299 0.666 0.666v23.667zM7 12h4v3h-4zM7 17h4v3h-4zM7 22h4v3h-4zM14 22h4v3h-4zM14 17h4v3h-4zM14 12h4v3h-4zM21 22h4v3h-4zM21 17h4v3h-4zM21 12h4v3h-4z"></path>
+                            </svg>
+                            <span>Jan 20, 2023</span>
+                        </span>
+                    </div>
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consectetur vitae eveniet numquam aliquam officiis. Illo, dicta. Dolore, similique assumenda?</p>
+                    </div>
+                    <a href="#" class="text-link" title="Read More">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="review-box section-padding">
+        <h2 class="titlestyle2 text-center">Testimonials</h2>
+        <div class="container">
+            <div class="review-grid">
+                <div class="review-item">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                        <title>quotes-left</title>
+                        <path fill="currentColor" d="M7.031 14c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7l-0.031-1c0-7.732 6.268-14 14-14v4c-2.671 0-5.182 1.040-7.071 2.929-0.364 0.364-0.695 0.751-0.995 1.157 0.357-0.056 0.724-0.086 1.097-0.086zM25.031 14c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7l-0.031-1c0-7.732 6.268-14 14-14v4c-2.671 0-5.182 1.040-7.071 2.929-0.364 0.364-0.695 0.751-0.995 1.157 0.358-0.056 0.724-0.086 1.097-0.086z"></path>
+                    </svg>
+                    <figure class="review-meta">
+                        <img src="./uploads/sunset.jpg" alt="Avatar" />
+                        <figcaption class="reviewer"><strong>Yubaraj Rai</strong> Full-stack Developer</figcaption>
+                    </figure>
+                    <div class="review-detail">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas provident enim saepe ipsum, quod consectetur qui perferendis, sed corporis voluptates perspiciatis aperiam sequi consequatur asperiores commodi placeat reiciendis ea ipsa.</p>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                        <title>quotes-left</title>
+                        <path fill="currentColor" d="M7.031 14c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7l-0.031-1c0-7.732 6.268-14 14-14v4c-2.671 0-5.182 1.040-7.071 2.929-0.364 0.364-0.695 0.751-0.995 1.157 0.357-0.056 0.724-0.086 1.097-0.086zM25.031 14c3.866 0 7 3.134 7 7s-3.134 7-7 7-7-3.134-7-7l-0.031-1c0-7.732 6.268-14 14-14v4c-2.671 0-5.182 1.040-7.071 2.929-0.364 0.364-0.695 0.751-0.995 1.157 0.358-0.056 0.724-0.086 1.097-0.086z"></path>
+                    </svg>
+                    <figure class="review-meta">
+                        <img src="./uploads/sunset.jpg" alt="Avatar" />
+                        <figcaption class="reviewer"><strong>Yubaraj Rai</strong> Full-stack Developer</figcaption>
+                    </figure>
+                    <div class="review-detail">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas provident enim saepe ipsum, quod consectetur qui perferendis, sed corporis voluptates perspiciatis aperiam sequi consequatur asperiores commodi placeat reiciendis ea ipsa.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#" title="View All" class="btn btn-primary">View All</a>
+            </div>
+        </div>
+    </section>
+    <div class="faq-block section-padding-bottom">
+        <h2 class="titlestyle2 text-center">FAQs</h2>
+        <dl class="accordion">
+            <dt>How can I Register for new enrolment?</dt>
+            <dd>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum voluptatibus optio, voluptatum amet placeat laboriosam asperiores porro et velit magnam. Soluta neque maxime assumenda libero unde ut asperiores autem pariatur!</p>
+                <ul>
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, necessitatibus?</li>
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, necessitatibus?</li>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias fugit necessitatibus, perferendis cumque ab dolores!</li>
+                </ul>
+            </dd>
+            <dt>Can I share my articles to publish on your site?</dt>
+            <dd>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum voluptatibus optio, voluptatum amet placeat laboriosam asperiores porro et velit magnam. Soluta neque maxime assumenda libero unde ut asperiores autem pariatur!</p>
+            </dd>
+            <dt>Do you have 24/7 support?</dt>
+            <dd>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum voluptatibus optio, voluptatum amet placeat laboriosam asperiores porro et velit magnam. Soluta neque maxime assumenda libero unde ut asperiores autem pariatur!</p>
+            </dd>
+            <dt>How can I get your development team?</dt>
+            <dd>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum voluptatibus optio, voluptatum amet placeat laboriosam asperiores porro et velit magnam. Soluta neque maxime assumenda libero unde ut asperiores autem pariatur!</p>
+                <ol>
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, necessitatibus?</li>
+                    <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                </ol>
+            </dd>
+        </dl>
+    </div>
+    <div class="form-box section-padding bgcream">
+        <h2 class="titlestyle2 text-center">Contact Us</h2>
+        <!-- 
+            - Tags: parent (wrapper/holder), childrens (fields)
+            - Form tag mendatory attributes: 
+                    action (dynamic program file / #), 
+                    method (POST/GET),
+                    name (lowercase / snake_case)
+                    
+                    if, you have file uploading field in the form
+                    attrbutes required: enctype (multipart/form-data)
+
+            Connection between form and database
+            HTML Document (Client-end) - Dynamic/Logical Program - Database (MySQL, SQL, MongoDB etc...)
+
+            _____
+            Fields:
+            - input (Types: text, email, phone, password, date, time, file, number, range, radio, checkbox, submit, hidden etc..)
+            - select (combobox / dropdown)
+            - textarea
+            - button
+
+            ====
+            text: single string data (normal)
+            file: file_name, temp_name, source_path, MIME_TYPE (file extensions)
+
+            enctype = encryption type
+         -->
+        <form action="#" method="GET" name="contact_form">
+            <div class="form-field">
+                <label for="fname">Fullname:</label>
+                <input type="text" name="fullname" id="fname" value="" required placeholder="i.e.: Yubaraj Rai" />
+            </div>
+            <div class="form-field">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" value="" />
+            </div>
+            <div class="form-field">
+                <label for="phone">Phone:</label>
+                <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" id="phone" value="" />
+            </div>
+            <div class="form-field">
+                <label for="address">Address:</label>
+                <input type="text" name="address" id="address" value="" />
+            </div>
+            <div class="form-field">
+                <label for="message">Message:</label>
+                <textarea rows="8" cols="12" name="message" id="message" placeholder="Write your message"></textarea>
+            </div>
+            <div class="form-footer">
+                <input type="submit" name="send" value="Send Message" />
+                <button type="reset" name="reset">Reset Form</button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container clearfix">
+                <div class="col col-4">
+                    <a href="/" title="Project Zero" class="site-logo">
+                        <img src="./images/Aakaar-Solution.png" alt="Project Zero" />
+                    </a>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolorem?</p>
+                </div>
+                <div class="col col-4">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="quick-links">
+                        <li><a href="./about.html" title="About Us">About Us</a></li>
+                        <li><a href="./services.html" title="Services">Services</a></li>
+                        <li><a href="./blog.html" title="Blog">Blog</a></li>
+                        <li><a href="./faq.html" title="FAQs">FAQs</a></li>
+                        <li><a href="./contact.html" title="Contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col col-4">
+                    <h4 class="footer-title">Contact Detail</h4>
+                    <ul class="contact-info">
+                        <li><a href="tel:+9779852079777" title="+9779852079777">+9779852079777</a></li>
+                        <li><a href="mailto:yubaraj.name@gmail.com" title="yubaraj.name@gmail.com">yubaraj.name@gmail.com</a></li>
+                    </ul>
+                    <ul class="social-links">
+                        <li>
+                            <a href="https://www.facebook.com/aakaarsolution" target="_blank" title="Facebook">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>facebook</title>
+                                    <path fill="currentColor"
+                                        d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="Twitter">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>twitter</title>
+                                    <path fill="currentColor"
+                                        d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="Instagram">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>instagram</title>
+                                    <path fill="currentColor"
+                                        d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z">
+                                    </path>
+                                    <path fill="currentColor"
+                                        d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z">
+                                    </path>
+                                    <path fill="currentColor"
+                                        d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="linkedin">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>linkedin2</title>
+                                    <path fill="currentColor"
+                                        d="M12 12h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z">
+                                    </path>
+                                    <path fill="currentColor" d="M2 12h6v18h-6v-18z"></path>
+                                    <path fill="currentColor"
+                                        d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" title="YouTube">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                    viewBox="0 0 32 32">
+                                    <title>youtube</title>
+                                    <path fill="currentColor"
+                                        d="M31.681 9.6c0 0-0.313-2.206-1.275-3.175-1.219-1.275-2.581-1.281-3.206-1.356-4.475-0.325-11.194-0.325-11.194-0.325h-0.012c0 0-6.719 0-11.194 0.325-0.625 0.075-1.987 0.081-3.206 1.356-0.963 0.969-1.269 3.175-1.269 3.175s-0.319 2.588-0.319 5.181v2.425c0 2.587 0.319 5.181 0.319 5.181s0.313 2.206 1.269 3.175c1.219 1.275 2.819 1.231 3.531 1.369 2.563 0.244 10.881 0.319 10.881 0.319s6.725-0.012 11.2-0.331c0.625-0.075 1.988-0.081 3.206-1.356 0.962-0.969 1.275-3.175 1.275-3.175s0.319-2.587 0.319-5.181v-2.425c-0.006-2.588-0.325-5.181-0.325-5.181zM12.694 20.15v-8.994l8.644 4.513-8.644 4.481z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>  
+        </div>
+        <div class="footer-bottom text-center">
+            &copy;<script>
+                /** Get current year with JS*/
+                let date = new Date();
+                document.write(date.getFullYear());
+            </script> Copyright, All Rights Reserved!
+        </div>
+    </footer>
+    <!-- jQuery addon libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./lib/js/jquery.slimmenu.min.js"></script>
+    <!-- Fancybox jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- project script -->
+    <script src="./app.js"></script>
+</body>
+
+</html>
